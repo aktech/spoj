@@ -1,4 +1,4 @@
-/* Spoj Problem Solution: TEST */
+/* Spoj Problem Solution: TEST (Life, Universe & Everything) */
 /*
  *  Copyright (C) 2000-2014  Amit Kumar <dtu.amit@gmail.com> <www.iamit.in>
  *
