@@ -1,34 +1,47 @@
+/* Spoj Problem Solution: FCTRL2 *
+ *
+ *  Copyright (C) 2000-2014  Amit Kumar <dtu.amit@gmail.com> <www.iamit.in>
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ */
+
 #include<iostream>
 using namespace std;
 int main()
 {	int t;
 	cin>>t;
-	while(t--)
-  {	int a[200],rem,i=0,n,m=0,flag;
-	cin>>n;
-	flag = n;          
-	while(flag!=0) 
-	{ rem = flag%10;    
-	  a[i] = rem;      
-	  flag = flag/10;    
-	  i++;                    
-	  m++;      } 
-	int temp,x=0,index=0,j;
-	j = m;             
-	for(i=2;i<n;i++)   
-	{   temp = 0;
-		for(index=0;index<j;index++)
-		{  x = a[index]*i + temp;
-	       a[index] = x%10;
-	       temp = x/10; }     
-	    while(temp!=0)
-	    {   a[index] = temp % 10;
-			temp = temp/10;
-			index++;
-			j++;  }			                                                                      
-	}
-   for(i=j-1;i>=0;i--)  {cout<<a[i];}
-   cout<<"\n";
-}
-return 0;
+	while(t--) {	
+		int a[200],rem,i=0,n,m=0,flag;
+		cin>>n;
+		flag = n;          
+		while(flag!=0) { 
+			rem = flag%10;    
+	    	a[i] = rem;      
+		    flag = flag/10;    
+		    i++;                    
+		    m++;      
+		} 
+		int temp,x=0,index=0,j;
+		j = m;             
+		for(i=2;i<n;i++)   {
+			temp = 0;
+			for(index=0;index<j;index++)  {
+		    	x = a[index]*i + temp;
+			    a[index] = x%10;
+			    temp = x/10; 
+			}     
+			while(temp!=0) {
+				a[index] = temp % 10;
+				temp = temp/10;
+				index++;
+				j++;  
+			}			                                                                      
+	    }
+   		for(i=j-1;i>=0;i--)  {cout<<a[i];}
+   		cout<<"\n";
+    }
+	return 0;
 }
