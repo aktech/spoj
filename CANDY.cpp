@@ -18,17 +18,17 @@ using namespace std;
  {
      int sum=0,moves=0;
      for(int x=0; x<l; x++)
-     sum = sum + candy[x];
+     	sum = sum + candy[x];
 
      if (sum%l !=0)
-     return -1;
+     	return -1;
 
      else
      {
          int avg = sum/l;
          for(int x=0;x<l;x++){
              if(candy[x]<avg)
-             moves = moves + (avg-candy[x]); }
+             	moves = moves + (avg-candy[x]); }
      }
      return moves;
  }
