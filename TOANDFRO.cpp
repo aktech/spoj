@@ -25,7 +25,7 @@ int main()
         len = strlen(a);
         k = 1;
 
-        //Plaintext Func Start
+        //Plaintext Function Start
         for(int i=0;i<col;i++){
             j = i;
             while(j < len) {
@@ -37,7 +37,7 @@ int main()
             k = k + 2;
         }
         printf("\n");
-        //Plaintext Func End
+        //Plaintext Function End
     }
 return 0;
 }
