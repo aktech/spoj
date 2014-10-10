@@ -37,7 +37,7 @@ int main()
   // Applying Segmented Sieve   END
         for(int k=0; k <= (n-m); k++)       //Prints Final list of primes mapped from (m,n) to (0,n-m)
             if(a[k] == 1 && (k+m)!=1)
-                cout << k+m << endl;
+                cout << k+m << endl;        //Print Primes Corresponding to the mapped values
     }
     return 0;
 }
